@@ -185,26 +185,26 @@ The LM3478 is used to generate ±17 V rails at up to 4 A from an input volta
 
 - At minimum input voltage (9 V), the duty cycle is approximately:
 
-  $$
-  D = 1 - \frac{V_{in} \cdot \eta}{V_{out}} \approx 1 - \frac{9 \cdot 0.9}{17} \approx 0.52
-  $$
+$$
+D = 1 - \frac{V_{in} \cdot \eta}{V_{out}} \approx 1 - \frac{9 \cdot 0.9}{17} \approx 0.52
+$$
 
 - Use **MOSFET, inductor, and diode** that can handle peak currents around:
 
-  $$
-  I_{peak} \approx I_{out} + \frac{\Delta I_L}{2}
-  $$
+$$
+I_{peak} \approx I_{out} + \frac{\Delta I_L}{2}
+$$
 
 - Ensure **input capacitors** rated for ripple currents ≥ 2 A.
 - Use proper **thermal layout** with wide traces and solid ground plane.
 - For switching frequency of 500 kHz, set:
 
-  $$
-  R_{FA} = 4.503 \times 10^{11} \cdot f^{-1.26}
-  $$
+$$
+R_{FA} = 4.503 \times 10^{11} \cdot f^{-1.26}
+$$
 
-  For $f = 500\,\text{kHz}$, this yields:
+For $f = 500\,\text{kHz}$, this yields:
 
-  $$
-  R_{FA} \approx 13.1\,\text{k}\Omega
-  $$
+$$
+R_{FA} \approx 13.1\,\text{k}\Omega
+$$
