@@ -1,5 +1,3 @@
-[[Boost Converter|Useful Notes]]
-
 # LM3478 Useful Design Formulas
 
 ---
@@ -167,6 +165,7 @@ This is a chicken and the egg problem since you need to know the ripple to get t
 $$
 \Delta I_{L} = 0.3 \cdot I_{out(max)} \cdot \frac{V_{out}}{V_{in}}=2.27 A
 $$
+
 ---
 
 ### 3. Inductance
