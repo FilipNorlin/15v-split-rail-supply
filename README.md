@@ -140,7 +140,7 @@ $$
 ---
 
 
-# Circuit Requirements for LM3478 ±17 V, 4 A Boost Converter
+# Circuit Requirements for LM3478 ±17 V, 4 A Boost Converter And Components Scaling
 
 The LM3478 is used to generate ±17 V rails at up to 4 A from an input voltage of **9–12 V**. LDO regulators will post-regulate the outputs to ±15 V. Components must be selected for reliability, current handling, and thermal efficiency.
 
@@ -153,58 +153,90 @@ The LM3478 is used to generate ±17 V rails at up to 4 A from an input volta
 - **Output Current:** 4 A
 - **Post-regulation:** ±15 V via LDOs
 - **Switching Frequency:** 500 kHz (set using resistor on FA/SD pin)
+- **Efficiency** $\approx$ $85\%$
+
+### 1. Duty cycle
+
+$$
+D = 1 - \frac{V_{in} \cdot \eta}{V_{out}} \approx 0.52
+$$
+### 2. Estimate ripple current
+
+This is a chicken and the egg problem since you need to know the ripple to get the inductor value and to need to know the inductance for the ripple. Therefore we estimate it to some percentage of the maximum output current. As mentioned before it somewhere around 20-40%.
+
+$$
+\Delta I_{L} = 0.3 \cdot I_{out(max)} \cdot \frac{V_{out}}{V_{in}}=2.27 A
+$$
+---
+
+### 3. Inductance
+
+$$
+L = \frac{V_{in} \times D}{f \times \Delta I_L} = 4.4 \mu H
+$$
+Choose nearest standard value (e.g $4.7 \mu H$ - keep in mind typical $\pm20\%$ tolerance). A bigger Inductance will also reduce ripple. To compensate for the tolerance Im going to choose an even higher value inductor. $L=5.6 \mu H$ 
+
+### 4. (Actual) inductor ripple current
+
+$$
+\Delta I_L = \frac{V_{in} \times D}{L \times f} = 1.77A
+$$
+
+### 5. Maximum sw./ind./diode current
+
+$$
+I_{L_{peak}} = I_{out} \times \frac{1}{1-D} + \frac{\Delta I_L}{2} = 9.77 A
+$$
 
 ---
 
-### Power Stage Component Requirements
+# ✅ Component Selection Criteria
 
-| Component                  | Parameter               | Requirement                                                                  |
-| -------------------------- | ----------------------- | ---------------------------------------------------------------------------- |
-| **MOSFET**                 | Drain current           | $\geq 8$ A (includes margin for ripple and losses)                           |
-|                            | Drain-source voltage    | $\geq 35$ V (≥ 2× $V_{out}$ for transient headroom)                          |
-|                            | $R_{DS(on)}$            | $\leq 30$ mΩ for low conduction losses                                       |
-|                            | Package                 | DPAK, TO-252, or similar for thermal performance                             |
-| **Inductor**               | Saturation current      | $\geq 6$–8 A                                                                 |
-|                            | Inductance              | Estimate using:  $L = \frac{V_{in} \cdot D}{f \cdot \Delta I_L}$             |
-|                            |                         | where $\Delta I_L \approx 0.3 \cdot I_{out}$                                 |
-| **Diode**                  | Average forward current | $\geq 5$ A                                                                   |
-|                            | Reverse voltage         | $\geq 30$ V                                                                  |
-|                            | Type                    | Schottky (fast recovery, low $V_F$)                                          |
-| **Output Capacitor**       | Ripple current rating   | $\geq 3$ A RMS                                                               |
-|                            | ESR                     | Low ESR ceramic or polymer/tantalum                                          |
-|                            | Capacitance             | Use:  $\Delta V_{out} = \frac{\Delta I_L}{8 \cdot f \cdot C_{out}}$          |
-| **Current Sense Resistor** | Peak current setpoint   | $$R_{sense} = \frac{V_{CS}}{I_{peak}}, \quad V_{CS} \approx 100\,\text{mV}$$ |
-| **LDOs (±15 V)**           | Input voltage           | Must accept 17 V input                                                       |
-|                            | Dropout voltage         | ≤ 2 V                                                                        |
-|                            | Output current          | 4 A per rail                                                                 |
-|                            | Thermal dissipation     | Ensure heat sinking or thermal pad if needed                                 |
+### 🔋 MOSFET
+
+| Parameter                                | Specification                                             |
+| ---------------------------------------- | --------------------------------------------------------- |
+| Drain-Source Voltage (V<sub>DS</sub>)    | ≥ 30 V (1.5 × V<sub>out</sub>)                            |
+| Continuous Drain Current (I<sub>D</sub>) | ≥ 10 A                                                    |
+| On-Resistance (R<sub>DS(on)</sub>)       | ≤ 20 mΩ for low conduction loss                           |
+| Gate Charge (Q<sub>g</sub>)              | Low, for faster switching and less heat                   |
+| Package                                  | DPAK, SO-8, PowerPAK — good for hand soldering & thermals |
+
+**Example parts:**
+- IRFR3708 (30 V, 62 A, 11 mΩ, D2PAK)
+- BSC026N08NS5 (80 V, 60 A, 2.6 mΩ, PowerPAK)
 
 ---
 
-### Design Notes
+### 🌀 Inductor
 
-- At minimum input voltage (9 V), the duty cycle is approximately:
+| Parameter                            | Specification                          |
+| ------------------------------------ | -------------------------------------- |
+| Inductance                           | 5.6 μH (±20%)                          |
+| Saturation Current (I<sub>sat</sub>) | ≥ 10–12 A                              |
+| DCR (DC resistance)                  | Low (≤ 10–20 mΩ) for higher efficiency |
+| Core Type                            | Shielded preferred (for lower EMI)     |
 
-$$
-D = 1 - \frac{V_{in} \cdot \eta}{V_{out}} \approx 1 - \frac{9 \cdot 0.9}{17} \approx 0.52
-$$
+**Example parts:**
+- Coilcraft XAL7030-562 (5.6 μH, 15.8 A I<sub>sat</sub>, 9 mΩ)
+- Wurth 74437346056 (5.6 μH, 11 A, 12.5 mΩ)
 
-- Use **MOSFET, inductor, and diode** that can handle peak currents around:
+---
 
-$$
-I_{peak} \approx I_{out} + \frac{\Delta I_L}{2}
-$$
+### ⚡ Diode
 
-- Ensure **input capacitors** rated for ripple currents ≥ 2 A.
-- Use proper **thermal layout** with wide traces and solid ground plane.
-- For switching frequency of 500 kHz, set:
+| Parameter                               | Specification                                      |
+| --------------------------------------- | -------------------------------------------------- |
+| Reverse Voltage (V<sub>R</sub>)         | ≥ 30 V                                             |
+| Average Forward Current (I<sub>F</sub>) | ≥ 10 A avg, 20–30 A peak                           |
+| Type                                    | Schottky (for fast switching and low voltage drop) |
+| Package                                 | TO-220, D2PAK, PowerDI — good thermal performance  |
 
-$$
-R_{FA} = 4.503 \times 10^{11} \cdot f^{-1.26}
-$$
+**Example parts:**
+- STPS20L30D (30 V, 20 A, TO-220)
+- SBR10U30P5 (30 V, 10 A, PowerDI 5)
 
-For $f = 500\,\text{kHz}$, this yields:
+---
 
-$$
-R_{FA} \approx 13.1\,\text{k}\Omega
-$$
+
+
