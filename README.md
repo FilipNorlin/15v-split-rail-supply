@@ -1,9 +1,3 @@
-![[Main diagram.png| 650]]
-
----
-
-![[lm347_pinout.png]]
-
 # Design and Scaling of a ±17 V 4 A DC-DC Converter with LM3478
 
 ## LM3478 Useful Design Formulas
