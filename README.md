@@ -1,4 +1,4 @@
-# Design and Scaling of a ±17 V 4 A DC-DC Converter with LM3478
+\Delta I_{L} = 0# Design and Scaling of a ±17 V 4 A DC-DC Converter with LM3478
 
 ## LM3478 Useful Design Formulas
 
@@ -156,6 +156,7 @@ This is a chicken and the egg problem since you need to know the ripple to get t
 $$
 \Delta I_{L} = 0.3 \cdot I_{out(max)} \cdot \frac{V_{out}}{V_{in}}=2.27 A
 $$
+
 ---
 
 ### 3. Inductance
@@ -163,6 +164,7 @@ $$
 $$
 L = \frac{V_{in} \times D}{f \times \Delta I_L} = 4.4 \mu H
 $$
+
 Choose nearest standard value (e.g $4.7 \mu H$ - keep in mind typical $\pm20\%$ tolerance). A bigger Inductance will also reduce ripple. To compensate for the tolerance Im going to choose an even higher value inductor. $L=5.6 \mu H$ 
 
 ### 4. (Actual) inductor ripple current
