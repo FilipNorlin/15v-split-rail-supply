@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.25
         }
       },
       "diff_pair_dimensions": [
@@ -231,7 +231,11 @@
         },
         {
           "diameter": 0.5,
-          "drill": 0.3
+          "drill": 0.2
+        },
+        {
+          "diameter": 0.6,
+          "drill": 0.25
         },
         {
           "diameter": 0.7,
@@ -514,37 +518,43 @@
         "microvia_drill": 0.1,
         "name": "GND",
         "pcb_color": "rgb(90, 90, 90)",
-        "priority": 4,
+        "priority": 5,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.25,
-        "via_diameter": 0.8,
-        "via_drill": 0.4,
+        "track_width": 0.8,
+        "via_diameter": 0.7,
+        "via_drill": 0.3,
         "wire_width": 6
       },
       {
         "name": "LOOP",
         "pcb_color": "rgb(5, 0, 255)",
-        "priority": 3,
+        "priority": 4,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 1.2
+        "track_width": 1.5
       },
       {
         "name": "POWER",
         "pcb_color": "rgb(255, 98, 0)",
-        "priority": 0,
+        "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 1.2
+        "track_width": 1.5
       },
       {
         "name": "SENSITIVE",
         "pcb_color": "rgb(206, 0, 255)",
-        "priority": 2,
+        "priority": 3,
         "schematic_color": "rgba(0, 0, 0, 0.000)"
       },
       {
         "name": "SIGNAL",
         "pcb_color": "rgb(1, 209, 255)",
-        "priority": 1,
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
+      },
+      {
+        "name": "SWITCH_NODE",
+        "pcb_color": "rgb(180, 165, 0)",
+        "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)"
       }
     ],
@@ -567,7 +577,7 @@
         "pattern": "/+15V DC-DC Converter/V_IN"
       },
       {
-        "netclass": "LOOP",
+        "netclass": "SWITCH_NODE",
         "pattern": "/+15V DC-DC Converter/SW"
       },
       {

@@ -6692,6 +6692,16 @@
 	)
 	(wire
 		(pts
+			(xy 298.45 91.44) (xy 314.325 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "704ececd-d84a-48d4-8dd9-4862d25f739d")
+	)
+	(wire
+		(pts
 			(xy 106.68 80.01) (xy 100.33 80.01)
 		)
 		(stroke
@@ -6869,16 +6879,6 @@
 			(type default)
 		)
 		(uuid "81398715-e973-4171-83cd-f52c053fd64d")
-	)
-	(wire
-		(pts
-			(xy 314.325 91.44) (xy 299.085 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "822bfac6-4373-4a14-ab16-817bedbe0eaa")
 	)
 	(wire
 		(pts
@@ -8828,16 +8828,6 @@
 		(uuid "67307a0f-fbf4-4788-822e-814f45bf0549")
 	)
 	(label "SHUTDOWN"
-		(at 299.72 91.44 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6748a91c-f8cc-4686-82b3-d94cadb4dbd1")
-	)
-	(label "SHUTDOWN"
 		(at 269.24 185.42 180)
 		(effects
 			(font
@@ -8906,6 +8896,16 @@
 			(justify left bottom)
 		)
 		(uuid "73f9ceae-8e5c-47f4-bcd8-c4e6d099a966")
+	)
+	(label "SHUTDOWN"
+		(at 298.45 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "935299d2-41c8-4750-9980-b454d16a1757")
 	)
 	(label "FA{slash}SD"
 		(at 61.595 85.09 0)
@@ -14296,7 +14296,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "filip:TO-263-5_TabPin1-HandSoldered"
+		(property "Footprint" "filip:TO-263-4_TabPin1-HandSoldered"
 			(at 120.65 72.39 0)
 			(effects
 				(font
