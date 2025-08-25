@@ -2468,107 +2468,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "GND_3"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "GND"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "GND_3_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "GND_3_1_1"
-				(pin power_in line
-					(at 0 0 270)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "NPN_1"
 			(pin_numbers
 				(hide yes)
@@ -2794,250 +2693,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin open_emitter line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "E"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "NPN_2"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "Q"
-				(at -2.54 7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "NPN"
-				(at -2.54 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 63.5 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_BJTs"
-				(at 63.5 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Bipolar transistor symbol for simulation only, substrate tied to the emitter"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Device" "NPN"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Type" "GUMMELPOON"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" "1=C 2=B 3=E"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "simulation"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "NPN_2_0_1"
-				(polyline
-					(pts
-						(xy -2.54 0) (xy 0.635 0)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 0.635) (xy 2.54 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 1.27 0)
-					(radius 2.8194)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778) (xy 1.27 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.794 -1.27) (xy 2.794 -1.27)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.794 -1.27) (xy 2.794 -1.27)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "NPN_2_1_1"
-				(pin input line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin open_collector line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5384,12 +5039,6 @@
 		(uuid "8ed7ff79-050c-4f45-907c-60edf57c46c2")
 	)
 	(junction
-		(at 368.3 63.5)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8f81ce49-eef6-4e74-a2cb-88ffcfbe45bc")
-	)
-	(junction
 		(at 66.04 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6229,16 +5878,6 @@
 	)
 	(wire
 		(pts
-			(xy 344.17 90.17) (xy 355.6 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2c3575b1-fea1-478c-afc2-883f10976c57")
-	)
-	(wire
-		(pts
 			(xy 176.53 73.66) (xy 176.53 74.93)
 		)
 		(stroke
@@ -7059,16 +6698,6 @@
 	)
 	(wire
 		(pts
-			(xy 374.65 63.5) (xy 368.3 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "83664175-1969-465a-8eed-8ba6a275fe9e")
-	)
-	(wire
-		(pts
 			(xy 205.105 191.77) (xy 208.28 191.77)
 		)
 		(stroke
@@ -7249,16 +6878,6 @@
 	)
 	(wire
 		(pts
-			(xy 374.65 71.12) (xy 374.65 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "97df2028-4941-446d-8959-9ee72da2db79")
-	)
-	(wire
-		(pts
 			(xy 283.21 63.5) (xy 283.21 66.04)
 		)
 		(stroke
@@ -7336,16 +6955,6 @@
 			(type default)
 		)
 		(uuid "a0b0b5bb-44a9-4b9c-b77a-dd3ab74bb22b")
-	)
-	(wire
-		(pts
-			(xy 374.65 85.09) (xy 374.65 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a1b2ba3b-8eee-40ce-829e-e69eb2847e12")
 	)
 	(wire
 		(pts
@@ -7766,16 +7375,6 @@
 			(type default)
 		)
 		(uuid "c59bc225-7ba4-40ae-a58a-fc1bb11c08c0")
-	)
-	(wire
-		(pts
-			(xy 363.22 90.17) (xy 367.03 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c721e3c6-62c9-4f38-aacc-8cede094683d")
 	)
 	(wire
 		(pts
@@ -8954,16 +8553,6 @@
 		)
 		(uuid "2c9c6f57-7306-42c8-a532-b3214640c804")
 	)
-	(label "SHUTDOWN"
-		(at 344.17 90.17 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "30fff223-4712-4e62-a5bb-023846e66c0c")
-	)
 	(label "DIFF_POS"
 		(at 79.375 189.23 0)
 		(effects
@@ -9666,139 +9255,6 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 359.41 90.17 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0dbe8c3f-60e6-460b-8c2a-d18045bb7dfd")
-		(property "Reference" "R115"
-			(at 359.41 85.598 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100"
-			(at 359.41 87.63 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 359.41 91.948 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 359.41 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 359.41 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "00eb705a-1a8a-418b-9261-1e7ae39456ea")
-		)
-		(pin "2"
-			(uuid "5a07d919-d7ea-4b6d-b7ac-c77625bb94c9")
-		)
-		(instances
-			(project "15v_split_rail_supply"
-				(path "/bb89802d-7e38-4fba-a75e-923c723cd6a1/08e9616e-50e4-4810-b410-44b30eac73db"
-					(reference "R115")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "GND_3")
-		(lib_id "power:GND")
-		(at 374.65 95.25 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0e348a0a-01c9-428f-a135-e0da24e6a7ab")
-		(property "Reference" "#PWR034"
-			(at 374.65 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 374.65 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 374.65 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 374.65 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 374.65 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "83b4cd8d-ee8f-45c1-901e-4ac888399a90")
-		)
-		(instances
-			(project ""
-				(path "/bb89802d-7e38-4fba-a75e-923c723cd6a1/08e9616e-50e4-4810-b410-44b30eac73db"
-					(reference "#PWR034")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
 		(at 162.56 231.775 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10221,107 +9677,6 @@
 			(project "15v_split_rail_supply"
 				(path "/bb89802d-7e38-4fba-a75e-923c723cd6a1/08e9616e-50e4-4810-b410-44b30eac73db"
 					(reference "FB100")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "NPN_2")
-		(lib_id "Simulation_SPICE:NPN")
-		(at 372.11 90.17 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "12710643-0acc-41f3-bc02-cf2e525c96a1")
-		(property "Reference" "Q2"
-			(at 377.19 88.8999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NPN"
-			(at 377.19 91.4399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23_Handsoldering"
-			(at 435.61 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_BJTs"
-			(at 435.61 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Bipolar transistor symbol for simulation only, substrate tied to the emitter"
-			(at 372.11 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NPN"
-			(at 372.11 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" "GUMMELPOON"
-			(at 372.11 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=C 2=B 3=E"
-			(at 372.11 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "af0355d3-5737-4fa7-a1d9-3718c1a850d3")
-		)
-		(pin "1"
-			(uuid "1290eae6-2642-4eb9-a11b-375490835b7c")
-		)
-		(pin "2"
-			(uuid "f518db27-0aa3-4d5b-8c3b-94749b876c2e")
-		)
-		(instances
-			(project ""
-				(path "/bb89802d-7e38-4fba-a75e-923c723cd6a1/08e9616e-50e4-4810-b410-44b30eac73db"
-					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -14908,72 +14263,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 374.65 74.93 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8a43a39c-ea7b-41bc-add9-479d67364b71")
-		(property "Reference" "R116"
-			(at 370.586 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100"
-			(at 371.094 75.692 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 376.428 74.93 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 374.65 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 374.65 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7d168d35-37a4-4cfd-befa-db0068cc3491")
-		)
-		(pin "2"
-			(uuid "934b4d43-5c6a-4838-85e5-2b07b434b9c5")
-		)
-		(instances
-			(project "15v_split_rail_supply"
-				(path "/bb89802d-7e38-4fba-a75e-923c723cd6a1/08e9616e-50e4-4810-b410-44b30eac73db"
-					(reference "R116")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 198.755 181.61 90)
 		(unit 1)
@@ -15210,7 +14499,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+		(property "Footprint" "filip:TO-220-3 with HeatSink"
 			(at 266.065 2.54 0)
 			(effects
 				(font
@@ -18098,7 +17387,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "dc8ad813-46bd-4bf9-aaab-a51ddb4874de")
 		(property "Reference" "D102"
 			(at 218.44 92.7099 90)
@@ -18480,7 +17768,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+		(property "Footprint" "filip:TO-220-3 with HeatSink"
 			(at 137.16 63.5 0)
 			(effects
 				(font
